@@ -1,7 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet, SafeAreaView , TouchableOpacity, ScrollView, Image, TextInput, Button} from "react-native";
+import {
+ Dropdown }
+ from 'react-native-material-dropdown';
 
-const Login = () =>{
+const Signup = () =>{
 
     return(
         <ScrollView>
@@ -25,19 +28,39 @@ const Login = () =>{
                 secureTextEntry={true}
                 />
 
-                <Text
-                 style={styles.textStyleBlue}
-                 >Forgot Password?</Text>
+                <TextInput 
+                style={styles.textInput}
+                placeholder="Confirm Password"
+                secureTextEntry={true}
+                />
+
+                <TextInput 
+                style={styles.textInput}
+                placeholder="Name"
+                
+                />
+
+                <TextInput 
+                style={styles.textInput}
+                placeholder="Age"
+                keyboardType="numeric"
+                />
+
+                <TextInput 
+                style={styles.textInput}
+                placeholder="Gender"
+                
+                />
 
                  <TouchableOpacity 
                  style={styles.butonStyle} 
                  onPress={()=>{}} >
 
-                    <Text style={styles.buttonTextStyle}>Login</Text>
+                    <Text style={styles.buttonTextStyle}>Register</Text>
 
                  </TouchableOpacity>
 
-                <Text style={styles.textStyleBlack}>Not a member? Register here.</Text>
+                <Text style={styles.textStyleBlack}>Have an account? Login here.</Text>
 
                 <View style={styles.rowArrangement}>
 
@@ -88,7 +111,7 @@ const styles = StyleSheet.create({
     image:{
         marginTop:30,
         width:400,
-        height:250,
+        height:150,
     },
 
     textInput:{
@@ -113,7 +136,6 @@ const styles = StyleSheet.create({
         color:'#000000',
         alignSelf:'center',
         fontSize:19,
-        marginTop:-30
         
     },
 
@@ -121,7 +143,7 @@ const styles = StyleSheet.create({
         backgroundColor:'#126fb2',
         borderRadius:8,
         padding: 10,
-        margin:50,
+        margin:20,
         width:300
 
     },
@@ -134,7 +156,6 @@ const styles = StyleSheet.create({
   },
 
   iconStyle:{
-
     width:55,
     height:55
   },
@@ -153,7 +174,6 @@ const styles = StyleSheet.create({
   },
 
   horizontalLine:{
-      
       width:"35%",
       height:1.5,
       backgroundColor:'#b2b7bf',
@@ -164,5 +184,5 @@ const styles = StyleSheet.create({
 })
 
 
-export default Login;
+export default Signup;
 
