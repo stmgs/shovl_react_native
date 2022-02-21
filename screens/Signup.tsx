@@ -8,7 +8,7 @@ const Signup = () =>{
 
     return(
         <ScrollView>
-            <View style ={styles.wrapper}>
+            <SafeAreaView style ={styles.wrapper}>
 
                 <Image 
                 
@@ -95,7 +95,7 @@ const Signup = () =>{
 
 
             
-            </View>
+            </SafeAreaView>
         </ScrollView>
     )
 
