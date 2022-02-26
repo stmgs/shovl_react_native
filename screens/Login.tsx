@@ -1,12 +1,19 @@
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 import { View, Text, StyleSheet, SafeAreaView , TouchableOpacity, ScrollView, Image, TextInput, Button} from "react-native";
+import HomePage from "./Home";
 
-const Login = () =>{
+const Stack = createNativeStackNavigator(); 
+
+const LoginPageMain = ({navigation}) =>{
 
     return(
         <ScrollView>
-            <View style ={styles.wrapper}>
+            <SafeAreaView style ={styles.navHeader}>
+                <Button title="<" onPress={() => navigation.goBack()} />
+            </SafeAreaView>
 
+            <SafeAreaView style ={styles.wrapper}>
                 <Image 
                 
                 source={require('../assets/shovl_new_logo.png')}
@@ -31,7 +38,9 @@ const Login = () =>{
 
                  <TouchableOpacity 
                  style={styles.butonStyle} 
-                 onPress={()=>{}} >
+                 onPress={()=>{
+                    navigation.push('Home')
+                 }} >
 
                     <Text style={styles.buttonTextStyle}>Login</Text>
 
@@ -50,33 +59,43 @@ const Login = () =>{
                 </View>
                 
                 <View style={styles.rowArrangement}>
-        <TouchableOpacity>
-    <Image style={styles.iconStyle}
-    
-                source={
-                    require('../assets/facebook.png')}
-                resizeMode="center"
-                
-                />
-</TouchableOpacity>
-        <TouchableOpacity>
-    <Image style={styles.iconStyle}
-    
-                source={
-                    require('../assets/google.png')}
-                resizeMode="center"
-                
-                />
-</TouchableOpacity>
-      </View>
-
-
+                <TouchableOpacity>
+                <Image style={styles.iconStyle}
             
-            </View>
+                        source={
+                            require('../assets/facebook.png')}
+                        resizeMode="center"
+                        
+                        />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                 <Image style={styles.iconStyle}
+            
+                        source={
+                            require('../assets/google.png')}
+                        resizeMode="center"
+                        
+                        />
+                </TouchableOpacity>
+                </View>
+            </SafeAreaView>
         </ScrollView>
     )
 
 } 
+
+const LoginPage = () => {
+    return (
+        <Stack.Navigator   
+            initialRouteName="LoginMain"
+            screenOptions={{
+                headerShown: false
+                }}>
+            <Stack.Screen name = "LoginMain" component= {LoginPageMain} />
+            <Stack.Screen name = "Home" component={HomePage}/>
+        </Stack.Navigator>
+    )
+}
 
 const styles = StyleSheet.create({
     wrapper:{
@@ -159,10 +178,15 @@ const styles = StyleSheet.create({
       backgroundColor:'#b2b7bf',
       marginRight:10,
       marginLeft:10
+  },
+
+  navHeader:{
+    marginLeft:"5%",
+    alignItems : 'flex-start'
   }
 
 })
 
 
-export default Login;
+export default LoginPage;
 

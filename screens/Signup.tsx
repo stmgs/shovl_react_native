@@ -4,14 +4,17 @@ import {
  Dropdown }
  from 'react-native-material-dropdown';
 
-const Signup = () =>{
+const SignupPage = ({navigation}) =>{
 
     return(
         <ScrollView>
-            <SafeAreaView style ={styles.wrapper}>
 
+            <SafeAreaView style ={styles.navHeader}>
+                <Button title="<" onPress={() => navigation.goBack()} />
+            </SafeAreaView>
+
+            <SafeAreaView style ={styles.wrapper}>
                 <Image 
-                
                 source={require('../assets/shovl_new_logo.png')}
                 resizeMode="center"
                 style={styles.image}
@@ -179,10 +182,16 @@ const styles = StyleSheet.create({
       backgroundColor:'#b2b7bf',
       marginRight:10,
       marginLeft:10
+  },
+
+  navHeader:{
+    marginLeft:"5%",
+    alignItems : 'flex-start'
   }
+
 
 })
 
 
-export default Signup;
+export default SignupPage;
 

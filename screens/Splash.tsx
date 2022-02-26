@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet, SafeAreaView , TouchableOpacity, Image} from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Login from "./Login";
-import Signup from "./Signup";
+import LoginPage from "./Login";
+import SignupPage from "./Signup";
 
+const Stack = createNativeStackNavigator(); 
 
-const Splash = () =>{
-
+const SplashPageMain = ({navigation}) =>{
 
     return(
 
@@ -27,21 +27,27 @@ const Splash = () =>{
             <View style={styles.bottmBox}>
 
                 <TouchableOpacity 
-                 style={styles.butonStyle} 
-                 onPress={()=>{}}>
+
+                    style={styles.butonStyle} 
+                    onPress={()=>{
+
+                        navigation.push('Login')
+
+                    }}>
 
                     <Text style={styles.buttonTextStyle}>Login</Text>
 
                  </TouchableOpacity>
 
                  <TouchableOpacity 
-                 style={styles.butonStyle} 
-                 onPress={()=>{
+                    style={styles.butonStyle} 
+                    onPress={()=>{
 
-                 }} >
+                        navigation.push('Signup')
+
+                    }} >
 
                     <Text style={styles.buttonTextStyle}>Signup</Text>
-
                  </TouchableOpacity>
 
             </View>
@@ -49,10 +55,22 @@ const Splash = () =>{
         </SafeAreaView>
 
         )
-
 }
 
 
+const SplashPage = () => {
+    return (
+        <Stack.Navigator   
+            initialRouteName="Splash"
+            screenOptions={{
+                headerShown: false
+                }}>
+            <Stack.Screen name = "Splash" component= {SplashPageMain} />
+            <Stack.Screen name = "Login" component={LoginPage}/>
+            <Stack.Screen name = "Signup" component={SignupPage}/>
+        </Stack.Navigator>
+    )
+}
 
 const styles = StyleSheet.create({
     wrapper:{
@@ -101,4 +119,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default Splash;
+export default SplashPage;

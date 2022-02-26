@@ -1,29 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import Splash from './screens/Splash';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Signup from './screens/Signup';
-import Login from './screens/Login';
+import SplashPage from './screens/Splash';
 
 const Stack = createStackNavigator(); 
 
 export default function App() {
   return (
-    <View style={styles.container}>
 
-       <Splash/>
-      
-      
-    </View>
+    <NavigationContainer>
+      <SplashPage/>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
