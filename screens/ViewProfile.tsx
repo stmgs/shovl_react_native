@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
         width: "100%",
         padding: 10,
         borderBottomWidth: 1,
-        marginTop: 10,
+        marginTop: 30,
         borderColor: "#0f0f0f",
         justifyContent: "space-between"
     },
