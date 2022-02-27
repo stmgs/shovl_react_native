@@ -7,45 +7,45 @@ Below are the screenshots of the application.
 
 <table>
   <tr>
-    <td>Splash Screen</td>
-     <td>Login</td>
-     <td>Sign Up</td>
+    <td><b>Demo GIF </b></td>
+    <td><b>Splash Screen<b></td>
+     <td><b>Login<b></td>
   </tr>
   <tr>
+    <td><img src="assets/Application%20Screenshots/screens.gif" width=270 height=480></td>
     <td><img src="assets/Application%20Screenshots/SpashScreen.jpg" width=270 height=480></td>
-    <td><img src="assets/Application%20Screenshots/Login.jpg" width=270 height=480></td>
+    <td><img src="assets/Application%20Screenshots/Login.jpg" width=270 height=480></td>     
+  </tr>
+  <br/>
+  <tr>
+    <td><b>Sign Up<b></td>
+    <td><b>Home Page<b></td>
+    <td><b>Add Listing<b></td>
+  </tr>
+  <tr>
     <td><img src="assets/Application%20Screenshots/Registration.jpg" width=270 height=480></td>
-     
-  </tr>
-  <tr>
-    <td>Home Page</td>
-     <td>Add Listing</td>
-     <td>Advertisement Details</td>
-    
-  </tr>
-  <tr>
     <td><img src="assets/Application%20Screenshots/Homepage.jpg" width=270 height=480></td>
     <td><img src="assets/Application%20Screenshots/Add%20Listing.jpg" width=270 height=480></td>
-    <td><img src="assets/Application%20Screenshots/AdvertiseDetails.jpg" width=270 height=480></td>
+  </tr>
+  
+  <tr>
+    <td><b>Advertisement Details<b></td>
+    <td><b>Bidding<b></td>
+    <td><b>Payment<b></td>
   </tr>
   <tr>
-    <td>Bidding</td>
-    <td>Payment</td>
-    <td>View Profile</td>
-  </tr>
-  <tr>
+     <td><img src="assets/Application%20Screenshots/AdvertiseDetails.jpg" width=270 height=480></td>
      <td><img src="assets/Application%20Screenshots/Bidding.jpg" width=270 height=480></td>
      <td><img src="assets/Application%20Screenshots/Payment.jpg" width=270 height=480></td>
+  </tr>
+  <tr>
+  <br/>
+    <td><b>View Profile<b></td>
+    <td><b>Edit Profile<b></td>
+  </tr>
+  <tr>
     <td><img src="assets/Application%20Screenshots/ViewProfile.jpg" width=270 height=480></td>
-   
-  </tr>
-  <tr>
-  <td>Edit Profile</td>
-    <td>Demo GIf</td>
-  </tr>
-  <tr>
     <td><img src="assets/Application%20Screenshots/EditProfile.jpg" width=270 height=480></td>
-     <td><img src="assets/Application%20Screenshots/screens.gif" width=270 height=480></td>
   </tr>
  </table>
  <br/><br/>
