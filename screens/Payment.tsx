@@ -1,65 +1,58 @@
-    import React from "react";
-    import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, ScrollView, Image, TextInput, Button, ImageBackground } from "react-native";
+import React from "react";
+import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, ScrollView, Image, TextInput, Button, ImageBackground } from "react-native";
 // import { ScrollView } from "react-native-gesture-handler";
 
-const PaymentPage = (navigation) =>{
-    return(
+const PaymentPage = (navigation) => {
+    return (
         <ScrollView>
 
-            <SafeAreaView style ={styles.navHeader}>
+            {/* <SafeAreaView style ={styles.navHeader}>
                 <Button title="<" onPress={() => navigation.goBack()} />
-            </SafeAreaView>
+            </SafeAreaView> */}
 
             <View style={styles.wrapper}>
                 <View style={styles.menu}>
                     <Image
-                        source={require('../assets/shovl_new_logo.png')}
+                        source={require('../assets/snowflakes.png')}
                         resizeMode="center"
                         style={styles.logoimage}
                     />
                     <Text style={styles.tag}>Payment</Text>
                     <Text>Home</Text>
                 </View>
-                <SafeAreaView style = {styles.wrapper}>
+                <SafeAreaView style={styles.wrapper}>
 
-                <Text style = {styles.creditguide}>Enter Debit/Credit Details</Text>
+                    <Text style={styles.creditguide}>Enter Debit/Credit Details</Text>
 
-                    <Image 
+                    <Image
                         source={require('../assets/payment.png')}
                         resizeMode="center"
                         style={styles.image}
                     />
 
-                    <TextInput 
+                    <TextInput
                         style={styles.textInput}
                         placeholder="Enter Debit/Credit Number"
                     />
 
-                    <TextInput 
+                    <TextInput
                         style={styles.textInput}
                         placeholder="Enter CVV"
                     />
 
-                    <TextInput 
+                    <TextInput
                         style={styles.textInput}
                         placeholder="Enter Expiry Date(MM/YYYY)"
                     />
+                    <View style={styles.flexrow}>
+                        <TouchableOpacity onPress={() => { }} >
+                            <Text style={styles.buttonStyle}>Submit</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => { }} >
+                            <Text style={styles.cancelButton}>Cancel</Text>
+                        </TouchableOpacity>
 
-                <TouchableOpacity 
-                 style={styles.butonStyle} 
-                 onPress={()=>{}} >
-
-                    <Text style={styles.buttonTextStyle}>Pay</Text>
-                
-                 </TouchableOpacity>
-
-                 <TouchableOpacity 
-                 style={styles.butonStyle} 
-                 onPress={()=>{}} >
-
-                    <Text style={styles.buttonTextStyle}>Cancel</Text>
-
-                 </TouchableOpacity>
+                    </View>
 
                 </SafeAreaView>
             </View>
@@ -74,37 +67,38 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    
+
     menu: {
         // flex: 1,
         flexDirection: "row",
         width: "100%",
         padding: 10,
         borderBottomWidth: 1,
+        marginTop: 30,
         borderColor: "#0f0f0f",
         justifyContent: "space-between"
     },
-    
-    logoimage: 
-    { width: 60, height: 30 },
-    
-    image:{
+
+    logoimage:
+        { width: 60, height: 30 },
+
+    image: {
         alignSelf: 'center',
-        marginTop:40,
-        marginBottom:50,
+        marginTop: 40,
+        marginBottom: 50,
         padding: 0,
         width: 300,
         height: 55,
     },
 
     tag:
-     { fontSize: 20, fontWeight: "500" },
-     
-    textInput:{
+        { fontSize: 20, fontWeight: "500" },
+
+    textInput: {
         textAlign: 'center',
-        color:'#126fb2',
-        borderWidth:2,
-        borderColor:'#126fb2',
+        color: '#126fb2',
+        borderWidth: 2,
+        borderColor: '#126fb2',
         padding: 8,
         margin: 20,
         // marginLeft: 50,
@@ -114,43 +108,41 @@ const styles = StyleSheet.create({
         fontSize: 16
     },
 
-    creditguide:{
+    creditguide: {
         color: '#1e86c7',
         textAlign: 'center',
         marginTop: 70,
         fontSize: 29
     },
+    flexrow: {
+        flexDirection: "row",
 
-    button:{
-        backgroundColor:'#126fb2',
-        borderRadius:8,
+    },
+    buttonStyle: {
+        backgroundColor: '#126fb2',
+        borderRadius: 8,
         padding: 10,
-        margin:20,
-        width:300
+        color: "#fff",
+        margin: 20,
+        width: 100,
+        textAlign: "center",
+        fontWeight: "500"
     },
-
-    butonStyle:{
-        backgroundColor:'#126fb2',
-        alignItems: 'center',
-        borderRadius:8,
-        padding: 10, 
-        margin:20,
-        marginBottom: 1,
-        width:84
+    cancelButton: {
+        backgroundColor: '#900',
+        borderRadius: 8,
+        padding: 10,
+        color: "#fff",
+        margin: 20,
+        width: 100,
+        textAlign: "center",
+        fontWeight: "500"
 
     },
-
-  buttonTextStyle: {
-    color: "white",
-    alignSelf:'center',
-    fontSize:18,
-    fontWeight: "bold"
-  },
-
-  navHeader:{
-    marginLeft:"5%",
-    alignItems : 'flex-start'
-  },
+    navHeader: {
+        marginLeft: "5%",
+        alignItems: 'flex-start'
+    },
 })
 
 
