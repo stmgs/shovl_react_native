@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
         width: "100%",
         padding: 10,
         borderBottomWidth: 1,
-        marginTop: 10,
+        marginTop: 30,
         borderColor: "#0f0f0f",
         justifyContent: "space-between"
     },
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         padding: 10,
         color: "#fff",
-        margin: 10,
+        margin: 20,
         width: 100,
         textAlign: "center",
         fontWeight: "500"
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         padding: 10,
         color: "#fff",
-        margin: 10,
+        margin: 20,
         width: 100,
         textAlign: "center",
         fontWeight: "500"
