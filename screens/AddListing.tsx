@@ -29,16 +29,10 @@ const AddListing = () => {
                             placeholder=" Enter Address"
                         />
                     </View>
-
-                    <TextInput
-                        style={styles.province}
-                        placeholder="Province, Zip code"
-                    />
-
                     <View style={styles.labelName}>
                         <Text style={{ width: "20%" }}>Description:</Text>
 
-                        <TextInput style={styles.textArea}
+                        <TextInput style={styles.textInput}
                             multiline={true} numberOfLines={4} placeholder=" Description of the property and area of the property to be cleaned."
                         /></View>
                     <View style={styles.labelName}>
@@ -122,7 +116,7 @@ const styles = StyleSheet.create({
         width: "100%",
         padding: 10,
         borderBottomWidth: 1,
-        marginTop: 10,
+        marginTop: 30,
         borderColor: "#0f0f0f",
         justifyContent: "space-between"
     },
@@ -151,7 +145,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         padding: 10,
         color: "#fff",
-        margin: 10,
+        margin: 20,
         width: 100,
         textAlign: "center",
         fontWeight: "500"
@@ -161,7 +155,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         padding: 10,
         color: "#fff",
-        margin: 10,
+        margin: 20,
         width: 100,
         textAlign: "center",
         fontWeight: "500"
@@ -169,31 +163,10 @@ const styles = StyleSheet.create({
     },
     textInput: {
         color: '#126fb2',
-        borderBottomWidth: 2,
+        borderWidth: 2,
         borderColor: '#126fb2',
         padding: 8,
         margin: 8,
-        width: "60%",
-        borderRadius: 8,
-        fontSize: 16
-    }, textArea: {
-        color: '#126fb2',
-        borderWidth: 1,
-        borderColor: '#126fb2',
-        backgroundColor: "#f2f2f2",
-        padding: 8,
-        margin: 8,
-        width: "60%",
-        borderRadius: 8,
-        fontSize: 16
-    },
-    province: {
-        color: '#126fb2',
-        borderBottomWidth: 2,
-        borderColor: '#126fb2',
-        padding: 8,
-        margin: 8,
-        marginLeft: 78,
         width: "60%",
         borderRadius: 8,
         fontSize: 16
